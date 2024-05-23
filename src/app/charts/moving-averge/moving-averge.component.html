@@ -1,2 +1,6 @@
 <p>Candle and Line works!</p>
 <div #MovingChart></div>
+<button (click)="addLineSeries()">Add Line Series</button>
+<div *ngFor="let series of lineSeriesArray; let index = index">
+    <button (click)="removeLineSeries(index)">Remove Line Series {{ index + 1 }}</button>
+</div>
